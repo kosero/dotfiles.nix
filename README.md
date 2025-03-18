@@ -1,2 +1,2 @@
-# dotfiles
- Dotfiles
+# dotfiles.nix
+ ![](./.github/desktop.png)
