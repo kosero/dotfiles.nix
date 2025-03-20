@@ -8,13 +8,14 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    
+    catppuccin.url = "github:catppuccin/nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
   };
 
-  outputs = { nixpkgs, home-manager, nix-flatpak, ... }:
+  outputs = { nixpkgs, home-manager, nix-flatpak, catppuccin, ... }:
     let
-      lib = nixpkgs.lib;
+      #lib = import nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
     in {
@@ -23,7 +24,8 @@
           inherit pkgs;
           modules = [
               nix-flatpak.homeManagerModules.nix-flatpak
-              ./home/home.nix
+              catppuccin.homeManagerModules.catppuccin
+              ./home
             ];
         };
       };

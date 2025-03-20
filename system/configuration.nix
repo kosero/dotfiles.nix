@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
       ./modules/nvidia.nix
       ./modules/zsh.nix
@@ -56,7 +56,8 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
+
   users.defaultUserShell = pkgs.zsh;
   users.users.kosero = {
     isNormalUser = true;
@@ -96,6 +97,8 @@
     fallbackDns = [ "1.1.1.1" "1.0.0.1" ];
   };
 
+  systemd.oomd.enable = true;
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
@@ -105,4 +108,3 @@
 
   system.stateVersion = "24.11"; # Did you read the comment?
 }
-

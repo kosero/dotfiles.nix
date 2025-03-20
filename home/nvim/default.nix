@@ -26,6 +26,7 @@
 
       nil
       lua-language-server
+      vscode-langservers-extracted
       rust-analyzer
       pyright
       black

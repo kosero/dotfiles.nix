@@ -1,13 +1,13 @@
 { pkgs, ... }: {
 
   imports = [
-    ./nvim
     ./nervfetch
+    ./nvim
     ./wallpapers
   ];
   
   nixpkgs.config.allowUnfree = true;
-
+  
   home = {
     packages = with pkgs; [
       # APP
@@ -16,32 +16,57 @@
       mpv
       brave
 
+      # other
+      (catppuccin-kde.override {
+        flavour = [ "mocha" ];
+        accents = [ "pink" ];
+        winDecStyles = [ "classic" ];
+      })
+
       kdePackages.dolphin-plugins
       kdePackages.kdegraphics-thumbnailers
-      kdePackages.qtstyleplugin-kvantum
       kdePackages.qtsvg
       kdePackages.qtwayland
-      flatpak
       tree
       wl-clipboard
       lshw
       unzip
+      unrar
       wget
+      htop
       jq
       file
       playerctl
       pfetch
       kwalletmanager
 
-      # Dev
-      clang
-      cargo
+      #######
+      # Dev #
+      #######
       lua
       gnumake
       go
       git
+      godot_4
+      bun
+      nodejs_23
+
+      # C
+      clang
+      clang-tools
+
+      # Rust
+      cargo
+      rustc
+
+      # Python
+      python3
+      python3Packages.pip
+      python3Packages.virtualenv
       
-      # Font
+      ########
+      # Font #
+      ########
       nerdfonts
       hack-font
       font-awesome_5
@@ -51,7 +76,6 @@
 
     username = "kosero";
     homeDirectory = "/home/kosero";
-
 
     stateVersion = "24.11";
   };
