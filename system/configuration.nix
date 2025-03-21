@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ./modules/nvidia.nix
       ./modules/zsh.nix
+      ./modules/sddm
     ];
 
   # Bootloader.
@@ -35,7 +36,6 @@
   };
 
   services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
   services.xserver.xkb = {
@@ -76,6 +76,14 @@
      lsd
      wget
      git
+
+    (catppuccin-sddm.override {
+      flavor = "mocha";
+      font  = "Noto Sans";
+      fontSize = "9";
+      background = "${./modules/sddm/elfen_lied.png}";
+      loginBackground = true;
+    })
   ];
 
   # programs.mtr.enable = true;

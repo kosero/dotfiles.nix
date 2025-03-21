@@ -15,6 +15,7 @@
       aseprite
       mpv
       brave
+      easyeffects
 
       # other
       (catppuccin-kde.override {
