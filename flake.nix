@@ -9,11 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    catppuccin.url = "github:catppuccin/nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
   };
 
-  outputs = { nixpkgs, home-manager, nix-flatpak, catppuccin, ... }:
+  outputs = { nixpkgs, home-manager, nix-flatpak, ... }:
     let
       #lib = import nixpkgs.lib;
       system = "x86_64-linux";
@@ -24,7 +23,6 @@
           inherit pkgs;
           modules = [
               nix-flatpak.homeManagerModules.nix-flatpak
-              catppuccin.homeManagerModules.catppuccin
               ./home
             ];
         };

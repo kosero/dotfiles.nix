@@ -16,6 +16,7 @@
       mpv
       brave
       easyeffects
+      btop
 
       # other
       (catppuccin-kde.override {
