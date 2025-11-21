@@ -4,20 +4,20 @@
     syntaxHighlighting.enable = true;
     autosuggestions.enable = true;
 
-    shellInit = "$HOME/.local/bin/nervfetch";
     shellAliases = {
       # lsd
       ls = "lsd -l --color always";
-      
+
       # git
       gitc = "git clone";
       gitcmt = "git commit -m";
       gitp = "git push";
     };
 
+    zsh-autoenv.enable = true;
     ohMyZsh = {
       enable = true;
-      theme = "aussiegeek";
+      theme = "dst";
       plugins = [ "git" ];
     };
   };

@@ -1,13 +1,11 @@
 { pkgs, ... }: {
-
   imports = [
-    ./nervfetch
-    ./nvim
+    ./nixvim.nix
     ./wallpapers
   ];
-  
+
   nixpkgs.config.allowUnfree = true;
-  
+
   home = {
     packages = with pkgs; [
       # APP
@@ -17,13 +15,9 @@
       brave
       easyeffects
       btop
-
-      # other
-      (catppuccin-kde.override {
-        flavour = [ "mocha" ];
-        accents = [ "pink" ];
-        winDecStyles = [ "classic" ];
-      })
+      alacritty
+      superTuxKart
+      vscode
 
       kdePackages.dolphin-plugins
       kdePackages.kdegraphics-thumbnailers
@@ -36,11 +30,11 @@
       unrar
       wget
       htop
+      vesktop
       jq
       file
       playerctl
       pfetch
-      kwalletmanager
 
       #######
       # Dev #
@@ -49,9 +43,15 @@
       gnumake
       go
       git
-      godot_4
+      godotPackages_4_5.godot
       bun
-      nodejs_23
+      unityhub
+      jetbrains-toolbox
+      nodejs_24
+
+      # .NET
+      dotnet-sdk
+      dotnet-runtime
 
       # C
       clang
@@ -65,48 +65,25 @@
       python3
       python3Packages.pip
       python3Packages.virtualenv
-      
+
       ########
       # Font #
       ########
-      nerdfonts
+      nerd-fonts._0xproto
+      nerd-fonts.droid-sans-mono
       hack-font
       font-awesome_5
       iosevka
       ubuntu_font_family
+      jetbrains-mono
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
     ];
 
     username = "kosero";
     homeDirectory = "/home/kosero";
 
-    stateVersion = "24.11";
-  };
-
-  services.flatpak.enable = true;
-  services.flatpak.packages = [
-    "com.github.tchx84.Flatseal"
-    "com.obsproject.Studio"
-    "com.usebottles.bottles"
-    "com.valvesoftware.Steam"
-    "dev.vencord.Vesktop"
-    "fr.romainvigier.MetadataCleaner"
-    "md.obsidian.Obsidian"
-    "net.davidotek.pupgui2"
-    "org.audacityteam.Audacity"
-    "org.gimp.GIMP"
-    "org.inkscape.Inkscape"
-    "org.kde.krita"
-    "org.mozilla.Thunderbird"
-    "org.onlyoffice.desktopeditors"
-    "org.prismlauncher.PrismLauncher"
-    "org.qbittorrent.qBittorrent"
-  ];
-
-  xdg.configFile."user-tmpfiles.d/home-manager.conf" = {
-    text = ''
-      L %t/discord-ipc-0 - - - - .flatpak/dev.vencord.Vesktop/xdg-run/discord-ipc-0
-    '';
-    onChange = "${pkgs.systemd}/bin/systemd-tmpfiles --user --create";
+    stateVersion = "25.05";
   };
 
   home.sessionVariables = {
@@ -121,12 +98,12 @@
     WLR_DRM_NO_ATOMIC = "1";
     GBM_BACKEND = "nvidia-drm";
     LIBVA_DRIVER_NAME = "nvidia";
-    
+
     ##############################
     ## FIREFOX
     ##############################
     MOZ_ENABLE_WAYLAND = "1";
-    
+
     ##############################
     ## QT
     ##############################
@@ -134,7 +111,7 @@
     QT_QPA_PLATFORMTHEME = "qt6ct";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    
+
     ##############################
     ## Wayland / XDG
     ##############################

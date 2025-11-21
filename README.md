@@ -1,3 +1,1 @@
-# dotfiles.nix
-
- ![](./.github/desktop.png)
+### My personal NixOS configuration
