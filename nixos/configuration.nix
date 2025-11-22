@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
   imports =
     [
@@ -12,6 +12,7 @@
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
+  boot.crashDump.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -25,6 +26,7 @@
     # firewall.allowedTCPPorts = [ ... ];
     # firewall.allowedUDPPorts = [ ... ];
     firewall.enable = true;
+    useDHCP = lib.mkDefault true;
   };
 
   time.timeZone = "Europe/Istanbul";
@@ -43,11 +45,6 @@
     };
   };
 
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-
   services = {
     xserver.enable = true;
     desktopManager.plasma6.enable = true;
@@ -59,6 +56,8 @@
         theme = "breeze";
       };
     };
+
+    switcherooControl.enable = true;
 
     xserver.xkb = {
       layout = "us";
@@ -100,6 +99,11 @@
       scheduler = "scx_bpfland";
     };
 
+    ananicy = {
+      enable = true;
+      rulesProvider = pkgs.ananicy-rules-cachyos;
+    };
+
     # openssh.enable = true;
   };
 
@@ -119,6 +123,12 @@
       isNormalUser = true;
       description = "kosero";
       extraGroups = [ "networkmanager" "wheel" ];
+      packages = with pkgs; [
+        kdePackages.dolphin-plugins
+        kdePackages.kdegraphics-thumbnailers
+        kdePackages.qtsvg
+        kdePackages.qtwayland
+      ];
     };
   };
 

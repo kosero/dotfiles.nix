@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   imports = [
     ./nixvim.nix
+    ./vesktop.nix
+    ./wezterm.nix
     ./wallpapers
   ];
 
@@ -8,29 +10,24 @@
 
   home = {
     packages = with pkgs; [
-      # APP
+      #######
+      # App #
+      #######
       spotify
       aseprite
       mpv
       brave
       easyeffects
       btop
-      alacritty
       superTuxKart
       vscode
 
-      kdePackages.dolphin-plugins
-      kdePackages.kdegraphics-thumbnailers
-      kdePackages.qtsvg
-      kdePackages.qtwayland
       tree
       wl-clipboard
       lshw
       unzip
       unrar
       wget
-      htop
-      vesktop
       jq
       file
       playerctl
@@ -48,6 +45,7 @@
       unityhub
       jetbrains-toolbox
       nodejs_24
+      raylib
 
       # .NET
       dotnet-sdk
