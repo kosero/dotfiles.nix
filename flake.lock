@@ -1,0 +1,223 @@
+{
+  "nodes": {
+    "cachyos-kernel": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1781883168,
+        "narHash": "sha256-raAojJGk0aWdscfFn/9ikZ6V5oUuAZcAz5kjAZ2QN3E=",
+        "owner": "CachyOS",
+        "repo": "linux-cachyos",
+        "rev": "daed450e9b1a4fadfef68fb4fa5e2f3391fedb34",
+        "type": "github"
+      },
+      "original": {
+        "owner": "CachyOS",
+        "repo": "linux-cachyos",
+        "type": "github"
+      }
+    },
+    "cachyos-kernel-patches": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1781953785,
+        "narHash": "sha256-YgEE1a5QdKd47AfRoU5G8nm0gGzeCuPN2emupNDMQcc=",
+        "owner": "CachyOS",
+        "repo": "kernel-patches",
+        "rev": "e8e9d325eea25f5664e045787c19baac661828de",
+        "type": "github"
+      },
+      "original": {
+        "owner": "CachyOS",
+        "repo": "kernel-patches",
+        "type": "github"
+      }
+    },
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767039857,
+        "narHash": "sha256-vNpUSpF5Nuw8xvDLj2KCwwksIbjua2LZCqhV1LNRDns=",
+        "owner": "NixOS",
+        "repo": "flake-compat",
+        "rev": "5edf11c44bc78a0d334f6334cdaf7d60d732daab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1778716662,
+        "narHash": "sha256-m1Yf0wZ8j1OHjTc2UwHwyQRSnNeSgLJOd7q5Y45hzi4=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "f7c1a2d347e4c52d5fb8d10cb4d94b5884e546fb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "freesmlauncher": {
+      "inputs": {
+        "libnbtplusplus": "libnbtplusplus",
+        "nix-filter": "nix-filter",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1781648727,
+        "narHash": "sha256-0u8DV4nGzbv2qUFBtN2TcbcHYHtmtHpvYP+epOwNaKk=",
+        "owner": "FreesmTeam",
+        "repo": "FreesmLauncher",
+        "rev": "910b6f63f4d623b173503d861858c8d238eae33b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "FreesmTeam",
+        "repo": "FreesmLauncher",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1781981105,
+        "narHash": "sha256-/1nNBbA7PrSQpTc9Qazkhl4kIPg+TNl0CjxS3UQJKlw=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "7bfff44b465909f69a442701293bc0badcf476dc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "release-26.05",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "libnbtplusplus": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1772016279,
+        "narHash": "sha256-7itkptyjoRcXfGLwg1/jxajetZ3a4mDc66+w4X6yW8s=",
+        "owner": "FreesmTeam",
+        "repo": "libnbtplusplus",
+        "rev": "687e43031df0dc641984b4256bcca50d5b3f7de3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "FreesmTeam",
+        "repo": "libnbtplusplus",
+        "type": "github"
+      }
+    },
+    "nix-cachyos-kernel": {
+      "inputs": {
+        "cachyos-kernel": "cachyos-kernel",
+        "cachyos-kernel-patches": "cachyos-kernel-patches",
+        "flake-compat": "flake-compat",
+        "flake-parts": "flake-parts",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1781981885,
+        "narHash": "sha256-kFjKufs3cSVFkmlFk/5z4EP6Dn4jRhTLQZg2/xodNuY=",
+        "owner": "xddxdd",
+        "repo": "nix-cachyos-kernel",
+        "rev": "e78b79d09762363960a1f86d83f90952b57fa5e3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "xddxdd",
+        "repo": "nix-cachyos-kernel",
+        "type": "github"
+      }
+    },
+    "nix-filter": {
+      "locked": {
+        "lastModified": 1757882181,
+        "narHash": "sha256-+cCxYIh2UNalTz364p+QYmWHs0P+6wDhiWR4jDIKQIU=",
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "rev": "59c44d1909c72441144b93cf0f054be7fe764de5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1781074563,
+        "narHash": "sha256-md8WlXOlfnIeHeOScMTTHFyf2d6iaTwPl2apR5EQ3P4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9ae611a455b90cf061d8f332b977e387bda8e1ca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1777168982,
+        "narHash": "sha256-GOkGPcboWE9BmGCRMLX3worL4EMnsnG8MyKmXNeYuhQ=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "f5901329dade4a6ea039af1433fb087bd9c1fe14",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1781216227,
+        "narHash": "sha256-9mUW6gNwoN2SWc/l0fW4svPNOulXLl8ijqKyeSOGgJE=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "a0374025a863d007d98e3297f6aa46cc3141c2f0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-26.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "freesmlauncher": "freesmlauncher",
+        "home-manager": "home-manager",
+        "nix-cachyos-kernel": "nix-cachyos-kernel",
+        "nixpkgs": "nixpkgs_2"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
