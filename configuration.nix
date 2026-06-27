@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ 
+    [
       ./modules/services
       ./modules/plasma.nix
       ./modules/users.nix
@@ -10,16 +10,15 @@
       ./modules/fish.nix
       ./modules/pkgs
       ./modules/font.nix
+      ./modules/cachix.nix
+      ./modules/tweaks.nix
     ];
 
-  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Set your time zone.
   time.timeZone = "Europe/Istanbul";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "tr_TR.UTF-8";
@@ -40,4 +39,3 @@
 
   system.stateVersion = "26.05";
 }
-

@@ -10,5 +10,9 @@
 
   services.printing.enable = true;
   services.switcherooControl.enable = true;
-  systemd.oomd.enable = true;
+
+  systemd.oomd = {
+    enable = true;
+    enableUserSlices = true;
+  };
 }
