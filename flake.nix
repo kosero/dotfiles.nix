@@ -22,10 +22,13 @@
         ./configuration.nix
         home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { inherit freesmlauncher; };
-          home-manager.users.kosero = import ./home;
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "backup";
+            extraSpecialArgs = { inherit freesmlauncher; };
+            users.kosero = import ./home;
+          };
         }
         { nixpkgs.overlays = [ nix-cachyos-kernel.overlays.pinned ]; }
       ];

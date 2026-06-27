@@ -7,6 +7,7 @@
 
   programs.steam.enable = true;
   environment.systemPackages = with pkgs; [
+    neovim
     pfetch
     lm_sensors
     btop
