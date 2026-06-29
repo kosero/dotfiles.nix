@@ -10,9 +10,10 @@
 
   services.printing.enable = true;
   services.switcherooControl.enable = true;
-
   systemd.oomd = {
     enable = true;
     enableUserSlices = true;
   };
+  services.fstrim.enable = true;
+  services.thermald.enable = true;
 }

@@ -12,5 +12,6 @@
     lm_sensors
     btop
     direnv
+    wget
   ];
 }

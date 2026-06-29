@@ -19,6 +19,7 @@
     })
     firefox
     blender
+    obs-studio
 
     ## OTHER
     python3Packages.kde-material-you-colors

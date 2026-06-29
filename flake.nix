@@ -1,6 +1,5 @@
 {
   description = "My nix dotfiles";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     home-manager = {
@@ -13,8 +12,7 @@
     };
     freesmlauncher.url = "github:FreesmTeam/FreesmLauncher";
   };
-
-  outputs = { self, nixpkgs, home-manager, nix-cachyos-kernel, freesmlauncher, ... }: {
+  outputs = { nixpkgs, home-manager, nix-cachyos-kernel, freesmlauncher, ... }: {
     nixosConfigurations.ln-82s9 = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [

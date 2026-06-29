@@ -6,7 +6,9 @@
         name = "kosero";
         email = "kosero@tuta.io";
       };
-      init.defaultBranch = "main";
+      init = {
+        defaultBranch = "main";
+      };
     };
   };
 }
