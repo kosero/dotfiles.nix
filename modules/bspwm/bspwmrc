@@ -1,10 +1,14 @@
 #!/bin/sh
 
-export XCURSOR_THEME=Qogir-cursors
+export XCURSOR_THEME=everforest-cursors
 export XCURSOR_SIZE=24
 xsetroot -cursor_name left_ptr
 
 export _JAVA_AWT_WM_NONREPARENTING=1
+export XDG_CURRENT_DESKTOP=BSPWM
+export BROWSER=chromium
+
+dbus-update-activation-environment --all
 
 # Monitor / desktop layout
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -23,6 +27,8 @@ bspc config window_gap    6
 bspc config focus_follows_pointer   true
 bspc config pointer_follows_focus   true
 bspc config pointer_follows_monitor true
+
+bspc config ignore_ewmh_focus true
 
 # Everforest
 bspc config normal_border_color   "#4c555b"

@@ -6,6 +6,7 @@
     ./ananicy.nix
     ./scx.nix
     ./zram.nix
+    ./tlp.nix
   ];
 
   services.printing.enable = true;

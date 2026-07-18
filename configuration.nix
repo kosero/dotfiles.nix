@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports =
     [
@@ -36,6 +36,14 @@
 
   nixpkgs.config.allowUnfree = true;
   environment.localBinInPath = true;
+
+  services.flatpak.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "gtk";
+  };
+  programs.dconf.enable = true;
 
   system.stateVersion = "26.05";
 }

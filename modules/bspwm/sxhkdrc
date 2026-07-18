@@ -31,8 +31,11 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
+super + alt + q
+	~/.config/bspwm/scripts.d/bspwm-quit.sh
+
+super + alt + r
+	bspc wm -r
 
 # close and kill
 super + {_,shift + }q

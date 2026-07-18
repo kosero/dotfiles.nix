@@ -2,6 +2,9 @@
   imports = [
     ./jetbrainsRider.nix
     ./vscode.nix
+    ./alacritty.nix
+    ./rofi.nix
+    ./flatpak.nix
   ];
 
   home.packages = with pkgs; [
@@ -13,11 +16,12 @@
     godot
     aseprite
     bottles
-    protonup-qt
     (discord.override {
       withVencord = true;
     })
+    vesktop
     firefox
+    ungoogled-chromium
     blender
     obs-studio
 

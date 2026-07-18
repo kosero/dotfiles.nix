@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 threshold_ms=$((3 * 60 * 60 * 1000))   # 3 hours
 

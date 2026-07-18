@@ -23,9 +23,4 @@
 
   # Nix store deduplication
   nix.settings.auto-optimise-store = true;
-
-  # Lenovo battery conservation mode (cap at ~60%)
-  systemd.tmpfiles.rules = [
-    "w /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode - - - - 1"
-  ];
 }
