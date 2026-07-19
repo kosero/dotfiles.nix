@@ -16,14 +16,13 @@
     godot
     aseprite
     bottles
-    (discord.override {
-      withVencord = true;
-    })
     vesktop
     firefox
     ungoogled-chromium
     blender
     obs-studio
+    qbittorrent
+    firefox
 
     ## OTHER
     python3Packages.kde-material-you-colors

@@ -3,8 +3,7 @@
   imports =
     [
       ./modules/services
-      # ./modules/plasma.nix
-      ./modules/bspwm
+      ./modules/wm/bspwm
       ./modules/users.nix
       ./modules/networking.nix
       ./modules/fish.nix

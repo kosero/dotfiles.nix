@@ -33,11 +33,10 @@ in {
     rofi
     feh
     xsetroot
-    thunar
     flameshot
     playerctl
     xprintidle
-    lemonbar-xft
+    polybarFull
     everforest-cursors
     everforest-gtk-theme
     xclip
@@ -46,7 +45,17 @@ in {
     libnotify
     blueman
     pavucontrol
+    xarchiver
+    ffmpegthumbnailer
   ];
+
+  programs.thunar.enable = true;
+  programs.thunar.plugins = with pkgs; [
+    thunar-archive-plugin
+    thunar-volman
+  ];
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
 
   home-manager.users.kosero = {
     gtk = {

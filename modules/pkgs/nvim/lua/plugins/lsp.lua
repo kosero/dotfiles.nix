@@ -33,6 +33,7 @@ return {
 
         if vim.lsp.config then
           vim.lsp.config(name, opts)
+          vim.lsp.enable(name)
         else
           local status, lspconfig = pcall(require, "lspconfig")
           if status then

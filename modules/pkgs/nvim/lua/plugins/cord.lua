@@ -1,5 +1,5 @@
 return {
---	{
---		"vyfor/cord.nvim",
---	},
+	{
+		"vyfor/cord.nvim",
+	},
 }

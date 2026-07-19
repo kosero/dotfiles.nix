@@ -18,5 +18,5 @@ run dunst
 # xss-lock -- systemctl poweroff &
 
 run $HOME/.config/bspwm/scripts.d/low_bat_notifier.sh &
-#run $HOME/.config/bspwm/scripts.d/idle-poweroff.sh &
-run $HOME/.config/bspwm/scripts.d/lemonbar.sh &
+run $HOME/.config/bspwm/scripts.d/idle-poweroff.sh &
+run $HOME/.config/bspwm/polybar/launch.sh &
