@@ -10,9 +10,9 @@
       ./modules/pkgs
       ./modules/font.nix
       ./modules/cachix.nix
-      ./modules/tweaks.nix
     ];
 
+  boot.initrd.systemd.enable = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -32,6 +32,7 @@
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.auto-optimise-store = true;
 
   nixpkgs.config.allowUnfree = true;
   environment.localBinInPath = true;

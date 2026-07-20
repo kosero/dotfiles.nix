@@ -17,4 +17,8 @@
   };
   services.fstrim.enable = true;
   services.thermald.enable = true;
+  services.dbus.implementation = "broker";
+  services.udev.extraRules = ''
+    ACTION=="add|change", KERNEL=="nvme*", SUBSYSTEM=="block", ATTR{queue/scheduler}="none", ATTR{queue/nr_requests}="256"
+  '';
 }

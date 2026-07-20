@@ -1,5 +1,4 @@
 { config, lib, modulesPath, ... }:
-
 {
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
@@ -14,9 +13,13 @@
     "nmi_watchdog=0"
   ];
   boot.kernel.sysctl = {
-    "vm.swappiness"             = 180;
-    "vm.dirty_ratio"            = 15;
-    "vm.dirty_background_ratio" = 5;
+    "vm.swappiness"                = 180;
+    "vm.dirty_ratio"               = 15;
+    "vm.dirty_background_ratio"    = 5;
+    "kernel.nmi_watchdog"          = 0;
+    "vm.vfs_cache_pressure"        = 50;
+    "vm.dirty_writeback_centisecs" = 1500;
+    "net.core.netdev_max_backlog"  = 4096;
   };
 
   fileSystems."/" =

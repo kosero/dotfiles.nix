@@ -5,6 +5,7 @@
     ./alacritty.nix
     ./rofi.nix
     ./flatpak.nix
+    ./vesktop.nix
   ];
 
   home.packages = with pkgs; [
@@ -16,16 +17,10 @@
     godot
     aseprite
     bottles
-    vesktop
     firefox
     ungoogled-chromium
     blender
     obs-studio
     qbittorrent
-    firefox
-
-    ## OTHER
-    python3Packages.kde-material-you-colors
-    playerctl
   ];
 }

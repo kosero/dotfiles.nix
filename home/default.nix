@@ -2,6 +2,7 @@
   imports = [
     ./pkgs
     ./xdg.nix
+    ./themes/everforest.nix
   ];
   home.username = "kosero";
   home.homeDirectory = "/home/kosero";
