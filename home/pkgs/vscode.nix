@@ -24,7 +24,8 @@ let
     "editor.stickyScroll.enabled" = false;
     "terminal.integrated.stickyScroll.enabled" = false;
   };
-in {
+in
+{
   programs.vscode = {
     enable = true;
     package = pkgs.vscode.fhsWithPackages (ps: with ps; [

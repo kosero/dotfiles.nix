@@ -21,7 +21,7 @@
   home.pointerCursor = {
     name = "everforest-cursors";
     package = pkgs.everforest-cursors;
-    size = 24;
+    size = 32;
     x11.enable = true;
     gtk.enable = true;
   };

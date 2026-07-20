@@ -1,5 +1,5 @@
 { pkgs, config, lib, ... }:
- {
+{
   imports = [
     ../ly.nix
   ];
